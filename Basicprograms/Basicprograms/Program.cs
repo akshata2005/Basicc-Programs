@@ -10,17 +10,12 @@ namespace Basicprograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter Year : ");
-            int Year = int.Parse(Console.ReadLine());
-            if (((Year % 4 == 0) && (Year % 100 != 0)) || (Year % 400 == 0))
+            Console.WriteLine("enter the number to print power of two");
+            int number = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= number; i++)
             {
-                Console.WriteLine("{0} is a Leap Year.", Year);
+                Console.WriteLine("power of 2 is" + Math.Pow(2, i));
             }
-            else
-            {
-                Console.WriteLine("{0} is not a Leap Year.", Year);
-            }
-            Console.ReadLine();
         }
     }
 }
