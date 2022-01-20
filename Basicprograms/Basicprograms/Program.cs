@@ -4,25 +4,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HarmonicSeries
+namespace Basicprograms
 {
     public class Program
     {
         static void Main(string[] args)
         {
-            int i, n;
-            double s = 0.0;
-
-            Console.Write("Calculate the harmonic series and their sum\n");
-            Console.Write("Input the number of terms : ");
-            n = Convert.ToInt32(Console.ReadLine());
+            int num1, num2, num3;
             Console.Write("\n\n");
-            for (i = 1; i <= n; i++)
+            Console.Write("Find the largest of three numbers:\n");
+            Console.Write("\n\n");
+
+            Console.Write("Input the 1st number :");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the  2nd number :");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the 3rd  number :");
+            num3 = Convert.ToInt32(Console.ReadLine());
+
+            if (num1 > num2)
             {
-                Console.Write("1/{0} + ", i);
-                s += 1 / (float)i;
+                if (num1 > num3)
+                {
+                    Console.Write("The 1st Number is the greatest among three. \n\n");
+                }
+                else
+                {
+                    Console.Write("The 3rd Number is the greatest among three. \n\n");
+                }
             }
-            Console.Write("\nSum of Series upto {0} terms is : {1} \n", n, s);
-        }
+            else if (num2 > num3)
+                Console.Write("The 2nd Number is the greatest among three \n\n");
+            else
+                Console.Write("The 3rd Number is the greatest among three \n\n");
         }
     }
+}
